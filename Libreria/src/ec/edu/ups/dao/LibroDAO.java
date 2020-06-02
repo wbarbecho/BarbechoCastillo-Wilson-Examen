@@ -4,8 +4,8 @@ import java.util.Set;
 
 import ec.edu.ups.modelo.Libro;
 
-public interface LibroDAO extends GenericDAO<Libro, Integer> {
+public interface LibroDAO extends GenericDAO<Libro, String> {
 
-	public abstract Libro read(int numero);
+	public abstract Libro readByisbn(String numero);
 
 }

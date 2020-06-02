@@ -17,5 +17,5 @@ public abstract class DAOBiblioteca {
 
 	public abstract CapituloDAO getCapituloDAO();
 
-	public abstract LibroDAO libroDAO();
+	public abstract LibroDAO getLibroDAO();
 }
