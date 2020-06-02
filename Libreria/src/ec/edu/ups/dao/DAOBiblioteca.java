@@ -4,13 +4,13 @@ import ec.edu.ups.mysql.Jpa.JPADAOGuia;
 
 public abstract class DAOBiblioteca {
 
-	protected static DAOBiblioteca guia = new JPADAOGuia();
+	protected static DAOBiblioteca factory = new JPADAOGuia();
 
 	/**
 	 * @return the guia
 	 */
 	public static DAOBiblioteca getGuia() {
-		return guia;
+		return factory;
 	}
 
 	public abstract AutorDAO getAutorDAO();

@@ -4,8 +4,6 @@ import java.io.Serializable;
 import javax.persistence.*;
 
 @NamedQuery(name = "readCapitulo", query = "SELECT c FROM Capitulo c WHERE c.titulo = :titulo")
-@NamedQuery(name = "findByLibro", query = "SELECT c FROM Capitulo c WHERE c.libro.isbn = :isbn")
-
 @Entity
 public class Capitulo implements Serializable {
 

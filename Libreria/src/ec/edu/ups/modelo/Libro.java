@@ -12,7 +12,7 @@ public class Libro implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	@Id
-	private int id;
+	private int codigo;
 	private String nombre;
 	@Column(name = "ISBN", unique = true, nullable = false)
 	private String ISBN;
@@ -23,21 +23,21 @@ public class Libro implements Serializable {
 	public Libro() {
 	}
 
-	public Libro(int id, String nombre, String iSBN, int numPaginas) {
+	public Libro(int codigo, String nombre, String iSBN, int numPaginas) {
 		super();
-		this.id = id;
+		this.codigo = codigo;
 		this.nombre = nombre;
 		ISBN = iSBN;
 		this.numPaginas = numPaginas;
 		capitulos = null;
 	}
 
-	public int getId() {
-		return id;
+	public int getCodigo() {
+		return codigo;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
 	}
 
 	public String getNombre() {
@@ -78,7 +78,7 @@ public class Libro implements Serializable {
 		int result = 1;
 		result = prime * result + ((ISBN == null) ? 0 : ISBN.hashCode());
 		result = prime * result + ((capitulos == null) ? 0 : capitulos.hashCode());
-		result = prime * result + id;
+		result = prime * result + codigo;
 		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
 		result = prime * result + numPaginas;
 		return result;
@@ -103,7 +103,7 @@ public class Libro implements Serializable {
 				return false;
 		} else if (!capitulos.equals(other.capitulos))
 			return false;
-		if (id != other.id)
+		if (codigo != other.codigo)
 			return false;
 		if (nombre == null) {
 			if (other.nombre != null)
@@ -117,7 +117,7 @@ public class Libro implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Libro [id=" + id + ", nombre=" + nombre + ", ISBN=" + ISBN + ", numPaginas=" + numPaginas + "]";
+		return "Libro [Codigo=" + codigo + ", nombre=" + nombre + ", ISBN=" + ISBN + ", numPaginas=" + numPaginas + "]";
 	}
 
 }

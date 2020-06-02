@@ -19,12 +19,4 @@ public class JPACapituloDAO extends JPAGenericDAO<Capitulo, Integer> implements 
 		return capitulo;
 	}
 
-	@Override
-	public Capitulo findByLibro(String numero) {
-		Query query = em.createNamedQuery("findByLibro");
-		query.setParameter("capitulo", numero);
-		Capitulo capitulo = (Capitulo) query.getSingleResult();
-		return capitulo;
-	}
-
 }

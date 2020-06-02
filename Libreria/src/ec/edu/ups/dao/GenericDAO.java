@@ -17,7 +17,6 @@ public interface GenericDAO<T, ID> {
 
 	public List<T> find();
 
-	// Telefono read(Usuario usuario);
 	Autor readAutor(Autor autor);
 
 	List<Capitulo> findByLibro(Capitulo capitulo);

@@ -8,6 +8,5 @@ public interface CapituloDAO extends GenericDAO<Capitulo, Integer> {
 
 	public abstract Capitulo readCapitulo(String numero);
 
-	public abstract Capitulo findByLibro(String numero);
 
 }
