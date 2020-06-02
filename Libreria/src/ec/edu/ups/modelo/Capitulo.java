@@ -3,16 +3,15 @@ package ec.edu.ups.modelo;
 import java.io.Serializable;
 import javax.persistence.*;
 
-/**
- * Entity implementation class for Entity: Capitulos
- *
- */
-@Entity
+@NamedQuery(name = "readCapitulo", query = "SELECT c FROM Capitulo c WHERE c.titulo = :titulo")
+@NamedQuery(name = "findByLibro", query = "SELECT c FROM Capitulo c WHERE c.libro.isbn = :isbn")
 
+@Entity
 public class Capitulo implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int codigo;
 	private int numero;
 	private String titulo;

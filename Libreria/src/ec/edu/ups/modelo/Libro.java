@@ -5,10 +5,8 @@ import java.util.List;
 
 import javax.persistence.*;
 
-/**
- * Entity implementation class for Entity: Libro
- *
- */
+@NamedQuery(name = "readByisbn", query = "SELECT l FROM Libro l WHERE l.ISBN = :ISBN")
+
 @Entity
 public class Libro implements Serializable {
 

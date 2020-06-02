@@ -3,15 +3,14 @@ package ec.edu.ups.modelo;
 import java.io.Serializable;
 import javax.persistence.*;
 
-/**
- * Entity implementation class for Entity: Autor
- *
- */
+@NamedQuery(name = "readAutor", query = "SELECT a FROM Autor a WHERE a.nombre = :nombre")
+
 @Entity
 public class Autor implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int codigo;
 	private String nombre;
 	private String nacionalidad;
